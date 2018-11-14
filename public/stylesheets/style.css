@@ -1,0 +1,125 @@
+
+
+body {
+  padding: 5vw;
+  background-color: antiquewhite;
+}
+
+a {
+  color: #8a6d3b;
+}
+
+header {
+  margin-bottom: 15px;
+}
+
+#mainLeftPane, #sideRecentsPane {
+  border: 1px #8a6d3b solid;
+  background-color: #fffefa;
+  border-radius: .5em;
+  margin-top: 1.5em;
+  padding: 5px;
+
+}
+
+h1 {
+  font-family: 'Cinzel', serif;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-size: x-large;
+  color: #4d4d4d;
+}
+
+h3 {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.comment {
+  margin: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.commentName {
+  color: hsla(34, 45%, 60%, 1);
+  font-size: xx-large;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.commentScripture {
+  text-align:center;
+  font-size: x-large;
+  font-style: italic;
+  font-weight: 800;
+  color: hsla(34, 45%, 60%, 1);
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.37);
+  letter-spacing: 3px;
+  font-family: 'Cinzel', serif;
+}
+
+.commentComment {
+  margin: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: x-large;
+  color: #b98746;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.commentDate {
+  font-size: x-small;
+  font-family: 'Roboto Slab', serif;
+}
+
+input {
+  margin: 5px;
+  background-color: antiquewhite;
+  border: 1px #00000038 solid;
+  padding: 5px;
+}
+
+input[type='text'] {
+ 
+}
+
+button {
+  margin: 5px;
+  background-color: antiquewhite;
+  border:none;
+  padding: 5px;
+  font-size: medium;
+  border: 1px #00000038 solid;
+  font-family: 'Roboto Slab', serif;
+}
+
+button:hover {
+  font-weight: 700;
+}
+
+#userName, #userComment {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: x-large;
+  width: 50%;
+  height: 40px;
+}
+
+#userFavScripture {
+  font-family: 'Cinzel', serif;
+  width: 50%;
+  height: 40px;
+}
+
+#userComment {
+  width: 95%;
+  height: 3em;
+  vertical-align: top;
+}
+
+#commentAddedConfirmation {
+  font-size: small;
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  margin: 5px;
+}

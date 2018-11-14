@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book of Mormon Commentator</title>
+
+    <meta charset="utf-8">
+
+    <!-- This is for bootstrap, to make the site look good on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Scripts for AngularJS should be at the top -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+
+    <!-- Bring in Stylesheets -->
+    <!-- Linking in Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="javascripts/comments.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:900|Roboto+Slab|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myController">
+
+    <div>
+        <header>
+            <h1>The Book of Mormon</h1>
+            <h2>Another Testament of Jesus Christ</h2>
+            <h3>As you study, post insights and scriptures that stuck out to you to share with others</h3>
+
+        </header>
+
+        <div class="row">
+            <div id="mainLeftPane" class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                <form>
+                    <input type="text" id="userName" placeholder="Name"><br>
+                    <input type="text" id="userFavScripture" placeholder="Favorite Scripture"><br>
+                    <input type="text" id="userComment" placeholder="Comment"><br>
+                    <!--<textarea id="userComment" placeholder="Comment"></textarea><br> -->
+                    <button id="userSubmitComment" ng-click="addComment(); $event.preventDefault()">Submit Comment</button>
+                    <p id="commentAddedConfirmation" hidden>Your comment has been added!</p>
+                </form>
+            </div>
+
+            <div id="sideRecentsPane" class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+                <div class="comment" ng-repeat="thing in comments | orderBy:'-date'">
+                        <div class="commentName" ng-bind="thing.name"></div>
+                        <div class="commentScripture" ng-bind="thing.favScripture"></div>
+                        <div class="commentComment" ng-bind="thing.comment"></div>
+                        <div class="commentDate" ng-bind="thing.date | date:'MMM dd, h:mm a'"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
