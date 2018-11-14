@@ -10,7 +10,6 @@ app.controller("myController", function($scope, $http) {
 
     $scope.getAllComments = function() {
         return $http.get('/comments').success(function(data) {
-            console.log("Got all of the comments from the server!");
             angular.copy(data, $scope.comments); //this will copy our comments to the comments array
         });
     };

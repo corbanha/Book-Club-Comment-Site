@@ -15,7 +15,6 @@ module.exports = router;
 
 
 router.get('/comments', function(req, res, next) {
-  console.log("In the get the comments area!");
 
   //TODO get latest 50 comments from the database
   //right now we return all of the comments in the database
@@ -29,7 +28,6 @@ router.get('/comments', function(req, res, next) {
 
 //this will add a comment to the database
 router.post('/comments', function(req, res, next) {
-  console.log("in the comment posting area!");
   console.log(req.body);
   var commentToAdd = new Comment(req.body);
   commentToAdd.save(function(err, comment){
